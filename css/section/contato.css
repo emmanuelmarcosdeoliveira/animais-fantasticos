@@ -1,0 +1,39 @@
+.mapa {
+  grid-column: 2;
+}
+.dados {
+  grid-column: 3;
+}
+.dados li {
+  margin-bottom: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  color: unset;
+}
+.dados li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: var(--cor-3);
+}
+.copy {
+  grid-column: 3/5;
+  margin-bottom: 2rem;
+  background: var(--cor-3);
+}
+.copy p {
+  padding: 20px;
+  font-family: var(--font-1);
+  font-weight: 700;
+  display: inline-block;
+}
+
+.copy a {
+  font-family: var(--font-1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--cor-4);
+  font-weight: 700;
+}

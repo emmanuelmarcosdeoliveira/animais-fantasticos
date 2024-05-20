@@ -1,0 +1,25 @@
+/* Styles Accordions List */
+.js [data-anime="accordion"] dd {
+  display: none;
+}
+[data-anime="accordion"] dt::after {
+  content: "▼";
+  margin-left: 10px;
+}
+[data-anime="accordion"] dt.active::after {
+  content: "▲";
+}
+[data-anime="accordion"] dd.active {
+  display: block;
+  animation: slideDow 0.5s forwards;
+}
+@keyframes slideDow {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}

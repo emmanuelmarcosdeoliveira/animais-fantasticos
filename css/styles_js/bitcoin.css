@@ -1,0 +1,6 @@
+.btc-preco {
+  background-color: var(--cor-open);
+  padding: 0.2rem 0.5rem;
+  font-weight: 700;
+  border-radius: 2px;
+}

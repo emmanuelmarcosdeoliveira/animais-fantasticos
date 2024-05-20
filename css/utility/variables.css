@@ -1,0 +1,15 @@
+/* Cores*/
+:root {
+  --cor-0: #faf6ed;
+  --cor-1: #222;
+  --cor-3: #fb5;
+  --cor-4: #e54;
+  --cor-white: #fff;
+  --cor-open: #3f4;
+}
+/* Fontes */
+:root {
+  --font-1: 'IBM Plex Mono', monospace;
+  --font-2: Arial, Helvetica, sans-serif;
+  --font-3: 'Playfair Display SC', serif;
+}

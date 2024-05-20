@@ -1,0 +1,24 @@
+.menu {
+  grid-column: 3/5;
+  margin: 2rem 0;
+  background-color: var(--cor-3);
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+  color: var(--cor-1);
+  text-decoration: none;
+  font-family: var(--font-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+}
