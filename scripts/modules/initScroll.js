@@ -1,21 +1,33 @@
-//---------------------------------------------------------------------
-// Scroll suave link intenro
-//---------------------------------------------------------------------
-export default function initScroll() {
-  const linksInterno = document.querySelectorAll(
-    '[data-menu="smoth"] a[href^="#"]'
-  )
+export default class scrollSoft {
+  constructor(links, options) {
+    this.linksInterno = document.querySelectorAll(links)
+    if (options === undefined) {
+      this.options = { behavior: "smooth", block: "start" }
+    } else {
+      this.options = options
+    }
+    this.scrollToSection = this.scrollToSection.bind(this)
+  }
 
-  function scrollToSection(event) {
+  scrollToSection(event) {
+    console.log(this)
     event.preventDefault()
-    const href = event.currentTarget.getAttribute('href')
+    const href = event.currentTarget.getAttribute("href")
     const section = document.querySelector(href)
-    section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+    section.scrollIntoView(this.options)
+  }
+
+  addLinkEvent() {
+    this.linksInterno.forEach((link) => {
+      link.addEventListener("click", this.scrollToSection)
     })
   }
-  linksInterno.forEach((link) => {
-    link.addEventListener('click', scrollToSection)
-  })
+
+  init() {
+    if (this.linksInterno.length) {
+      this.addLinkEvent()
+    }
+
+    return this
+  }
 }
