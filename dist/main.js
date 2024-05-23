@@ -1,1 +1,216 @@
-(()=>{"use strict";function t(t,e,n){const o=document.documentElement,c="data-outside";function a(i){t.contains(i.target)||(t.removeAttribute(c),e.forEach((t=>{o.removeEventListener(t,a)})),n())}t.hasAttribute(c)||(e.forEach((t=>{setTimeout((()=>{o.addEventListener(t,a)}))})),t.setAttribute(c,""))}!function(){const t=document.querySelectorAll("[data-tab='menu'] li"),e=document.querySelectorAll("[data-tab='content'] section");e[0].classList.add("active"),t.length&&e.length&&t.forEach(((t,n)=>{t.addEventListener("click",(()=>{!function(t){e.forEach((t=>{t.classList.remove("active")}));const n=e[t].dataset.anime;e[t].classList.add("active",n)}(n)}))}))}(),function(){const t=document.querySelectorAll("[data-anime='accordion'] dt"),e="active";function n(){this.classList.toggle(e),this.nextElementSibling.classList.toggle(e)}t.length&&(t[0].classList.add(e),t[0].nextElementSibling.classList.add(e),t.forEach((t=>{t.addEventListener("click",n)})))}(),function(){function t(t){t.preventDefault();const e=t.currentTarget.getAttribute("href");document.querySelector(e).scrollIntoView({behavior:"smooth",block:"start"})}document.querySelectorAll('[data-menu="smoth"] a[href^="#"]').forEach((e=>{e.addEventListener("click",t)}))}(),function(){const t=document.querySelectorAll("[data-anime='scroll']"),e=.6*window.innerHeight;function n(){t.forEach((t=>{t.getBoundingClientRect().top-e<0?t.classList.add("active"):t.classList.contains("active")&&t.classList.remove("active")}))}t.length&&(n(),window.addEventListener("scroll",n))}(),function(){const t=document.querySelector('[data-modal="open"]'),e=document.querySelector('[data-modal="close"]'),n=document.querySelector('[ data-modal="container"]');if(t&&e&&n){function o(t){t.preventDefault(),n.classList.toggle("active")}function c(t){t.target===this&&o(t)}t.addEventListener("click",o),e.addEventListener("click",o),n.addEventListener("click",c)}}(),function(){const t=document.querySelectorAll("[data-tooltip]");function e(){const t=function(t){const e=document.createElement("div"),n=t.getAttribute("aria-label");return e.classList.add("tooltip"),e.innerText=n,document.body.appendChild(e),e}(this);o.tooltipBox=t,this.addEventListener("mousemove",o),n.tooltipBox=t,n.element=this,this.addEventListener("mouseleave",n)}const n={handleEvent(){this.tooltipBox.remove(),this.element.removeEventListener("mouseleave",n),this.element.removeEventListener("mousemove",o)}},o={handleEvent(t){this.tooltipBox.style.top=`${t.pageY+20}px`,this.tooltipBox.style.left=`${t.pageX+20}px`}};t.forEach((t=>{t.addEventListener("mouseover",e)}))}(),function(){function e(e){e.preventDefault(),this.classList.add("active"),t(this,["touchstart","click"],(()=>{this.classList.remove("active")}))}document.querySelectorAll("[data-dropdown]").forEach((t=>{["touchstart","click"].forEach((n=>{t.addEventListener(n,e)}))}))}(),function(){const e=document.querySelector('[data-menu="button"]'),n=document.querySelector('[data-menu="list"]'),o=["click","touchstart"];if(e){function c(){n.classList.add("active"),e.classList.add("active"),t(n,o,(()=>{n.classList.remove("active"),e.classList.remove("active")}))}o.forEach((t=>{e.addEventListener(t,c)}))}}(),function(){const t=document.querySelector("[data-semana]"),e=t.dataset.semana.split(",").map(Number),n=t.dataset.horario.split(",").map(Number),o=new Date,c=o.getDay(),a=o.getHours(),i=-1!==e.indexOf(c);a>=n[0]&&a<n[1]&&i&&t.classList.add("open")}(),async function(t){try{const t=await fetch("./animaisapi.json"),e=await t.json(),n=document.querySelector(".numeros-grid");e.forEach((t=>{const e=function(t){const e=document.createElement("div");return e.classList.add("numero-animal"),e.innerHTML=`<h3>${t.specie}</h3><span data-numero>${t.total}</span>`,e}(t);n.appendChild(e)})),function(){const t=document.querySelector(".numeros"),e=new MutationObserver((function(t){t[0].target.classList.contains("active")&&(e.disconnect(),document.querySelectorAll("[data-numero]").forEach((t=>{let e=0;const n=+t.innerText,o=setInterval((()=>{const c=Math.floor(n/100);e+=c,t.innerText=e,e>n&&(t.innerText=n,clearInterval(o))}),50*Math.random())})))}));e.observe(t,{attributes:!0})}()}catch(t){console.log(t)}}(),fetch("https://blockchain.info/ticker").then((t=>t.json())).then((t=>{document.querySelector(".btc-preco").innerText=(100/t.BRL.sell).toFixed(4)})).catch((t=>{console.log(Error(t))}))})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./scripts/index.js":
+/*!**************************!*\
+  !*** ./scripts/index.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_initScroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/initScroll.js */ \"./scripts/modules/initScroll.js\");\n/* harmony import */ var _modules_accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accordion.js */ \"./scripts/modules/accordion.js\");\n/* harmony import */ var _modules_activeTabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/activeTabs.js */ \"./scripts/modules/activeTabs.js\");\n/* harmony import */ var _modules_animationScroll_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/animationScroll.js */ \"./scripts/modules/animationScroll.js\");\n/* harmony import */ var _modules_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/modal.js */ \"./scripts/modules/modal.js\");\n/* harmony import */ var _modules_tooltip_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tooltip.js */ \"./scripts/modules/tooltip.js\");\n/* harmony import */ var _modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/dropdown-menu.js */ \"./scripts/modules/dropdown-menu.js\");\n/* harmony import */ var _modules_menu_mobile_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/menu-mobile.js */ \"./scripts/modules/menu-mobile.js\");\n/* harmony import */ var _modules_operation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/operation.js */ \"./scripts/modules/operation.js\");\n/* harmony import */ var _modules_fetch_animais_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/fetch-animais.js */ \"./scripts/modules/fetch-animais.js\");\n/* harmony import */ var _modules_fetch_bitcoin_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/fetch-bitcoin.js */ \"./scripts/modules/fetch-bitcoin.js\");\n\n\n\n\n\n\n\n\n\n\n\nconst ScrollSoft = new _modules_initScroll_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('[data-menu=\"smoth\"] a[href^=\"#\"]');\nScrollSoft.init();\n(0,_modules_activeTabs_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n(0,_modules_accordion_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_animationScroll_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n(0,_modules_modal_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n(0,_modules_tooltip_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n(0,_modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n(0,_modules_menu_mobile_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\n(0,_modules_operation_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"])();\n(0,_modules_fetch_animais_js__WEBPACK_IMPORTED_MODULE_9__[\"default\"])();\n(0,_modules_fetch_bitcoin_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"])();\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/index.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/accordion.js":
+/*!**************************************!*\
+  !*** ./scripts/modules/accordion.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAccordion)\n/* harmony export */ });\nfunction initAccordion() {\n  const accordionList = document.querySelectorAll(\"[data-anime='accordion'] dt\");\n  const activeClass = \"active\";\n  function activeAccordion() {\n    this.classList.toggle(activeClass);\n    this.nextElementSibling.classList.toggle(activeClass);\n  }\n  if (accordionList.length) {\n    accordionList[0].classList.add(activeClass);\n    accordionList[0].nextElementSibling.classList.add(activeClass);\n    accordionList.forEach(item => {\n      item.addEventListener(\"click\", activeAccordion);\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/accordion.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/activeTabs.js":
+/*!***************************************!*\
+  !*** ./scripts/modules/activeTabs.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ activeTabs)\n/* harmony export */ });\nfunction activeTabs() {\n  const tabMenu = document.querySelectorAll(\"[data-tab='menu'] li\");\n  const tabContent = document.querySelectorAll(\"[data-tab='content'] section\");\n  tabContent[0].classList.add(\"active\");\n  function activeTab(index) {\n    tabContent.forEach(section => {\n      section.classList.remove(\"active\");\n    });\n    const direcao = tabContent[index].dataset.anime;\n    tabContent[index].classList.add(\"active\", direcao);\n  }\n  if (tabMenu.length && tabContent.length) {\n    tabMenu.forEach((itemMenu, index) => {\n      itemMenu.addEventListener(\"click\", () => {\n        activeTab(index);\n      });\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/activeTabs.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/anima-numeros.js":
+/*!******************************************!*\
+  !*** ./scripts/modules/anima-numeros.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAnimaNumeros)\n/* harmony export */ });\nfunction initAnimaNumeros() {\n  function aninaNumeros() {\n    const numeros = document.querySelectorAll('[data-numero]');\n    numeros.forEach(numeros => {\n      let start = 0;\n      const total = +numeros.innerText;\n      const timer = setInterval(() => {\n        const incremento = Math.floor(total / 100);\n        start = start + incremento;\n        numeros.innerText = start;\n        if (start > total) {\n          numeros.innerText = total;\n          clearInterval(timer);\n        }\n      }, 50 * Math.random());\n    });\n  }\n  function handleMutation(mutation) {\n    if (mutation[0].target.classList.contains('active')) {\n      observer.disconnect();\n      aninaNumeros();\n    }\n  }\n  const observerTarget = document.querySelector('.numeros');\n  const observer = new MutationObserver(handleMutation);\n  observer.observe(observerTarget, {\n    attributes: true\n  });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/anima-numeros.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/animationScroll.js":
+/*!********************************************!*\
+  !*** ./scripts/modules/animationScroll.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAnimationScroll)\n/* harmony export */ });\nfunction initAnimationScroll() {\n  const sections = document.querySelectorAll(\"[data-anime='scroll']\");\n  const windowMetade = window.innerHeight * 0.6;\n  function animaScroll() {\n    sections.forEach(section => {\n      const sectionTop = section.getBoundingClientRect().top;\n      const isSectionVisible = sectionTop - windowMetade < 0;\n      if (isSectionVisible) {\n        section.classList.add('active');\n      } else if (section.classList.contains('active')) {\n        section.classList.remove('active');\n      }\n    });\n  }\n  if (sections.length) {\n    animaScroll();\n    window.addEventListener('scroll', animaScroll);\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/animationScroll.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/dropdown-menu.js":
+/*!******************************************!*\
+  !*** ./scripts/modules/dropdown-menu.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initDropdownMenu)\n/* harmony export */ });\n/* harmony import */ var _outsideclick_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./outsideclick.js */ \"./scripts/modules/outsideclick.js\");\n\nfunction initDropdownMenu() {\n  const dropdownMenus = document.querySelectorAll('[data-dropdown]');\n  function handleClick(event) {\n    event.preventDefault();\n    this.classList.add('active');\n    (0,_outsideclick_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(this, ['touchstart', 'click'], () => {\n      this.classList.remove('active');\n    });\n  }\n  dropdownMenus.forEach(menu => {\n    ;\n    ['touchstart', 'click'].forEach(userEvent => {\n      menu.addEventListener(userEvent, handleClick);\n    });\n  });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/dropdown-menu.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/fetch-animais.js":
+/*!******************************************!*\
+  !*** ./scripts/modules/fetch-animais.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initFetchAnimais)\n/* harmony export */ });\n/* harmony import */ var _anima_numeros_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./anima-numeros.js */ \"./scripts/modules/anima-numeros.js\");\n\nfunction initFetchAnimais() {\n  async function fetchAnimais(url) {\n    try {\n      const animaisResponse = await fetch(url);\n      const animaisJSON = await animaisResponse.json();\n      const numerosGrid = document.querySelector('.numeros-grid');\n      animaisJSON.forEach(animal => {\n        const divAnimal = createAnimal(animal);\n        numerosGrid.appendChild(divAnimal);\n      });\n      (0,_anima_numeros_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n    } catch (erro) {\n      console.log(erro);\n    }\n  }\n  function createAnimal(animal) {\n    const div = document.createElement('div');\n    div.classList.add('numero-animal');\n    div.innerHTML = `<h3>${animal.specie}</h3><span data-numero>${animal.total}</span>`;\n    return div;\n  }\n  fetchAnimais('./animaisapi.json');\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/fetch-animais.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/fetch-bitcoin.js":
+/*!******************************************!*\
+  !*** ./scripts/modules/fetch-bitcoin.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initFetchBitcoin)\n/* harmony export */ });\nfunction initFetchBitcoin() {\n  fetch('https://blockchain.info/ticker').then(response => response.json()).then(bitcoin => {\n    const btcPreco = document.querySelector('.btc-preco');\n    btcPreco.innerText = (100 / bitcoin.BRL.sell).toFixed(4);\n  }).catch(erro => {\n    console.log(Error(erro));\n  });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/fetch-bitcoin.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/initScroll.js":
+/*!***************************************!*\
+  !*** ./scripts/modules/initScroll.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ scrollSoft)\n/* harmony export */ });\nclass scrollSoft {\n  constructor(links, options) {\n    this.linksInterno = document.querySelectorAll(links);\n    if (options === undefined) {\n      this.options = {\n        behavior: \"smooth\",\n        block: \"start\"\n      };\n    } else {\n      this.options = options;\n    }\n    this.scrollToSection = this.scrollToSection.bind(this);\n  }\n  scrollToSection(event) {\n    console.log(this);\n    event.preventDefault();\n    const href = event.currentTarget.getAttribute(\"href\");\n    const section = document.querySelector(href);\n    section.scrollIntoView(this.options);\n  }\n  addLinkEvent() {\n    this.linksInterno.forEach(link => {\n      link.addEventListener(\"click\", this.scrollToSection);\n    });\n  }\n  init() {\n    if (this.linksInterno.length) {\n      this.addLinkEvent();\n    }\n    return this;\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/initScroll.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/menu-mobile.js":
+/*!****************************************!*\
+  !*** ./scripts/modules/menu-mobile.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initMenuMobile)\n/* harmony export */ });\n/* harmony import */ var _outsideclick_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./outsideclick.js */ \"./scripts/modules/outsideclick.js\");\n\nfunction initMenuMobile() {\n  const menuButton = document.querySelector('[data-menu=\"button\"]');\n  const menuList = document.querySelector('[data-menu=\"list\"]');\n  const eventos = ['click', 'touchstart'];\n  if (menuButton) {\n    function openMenu() {\n      menuList.classList.add('active');\n      menuButton.classList.add('active');\n      (0,_outsideclick_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(menuList, eventos, () => {\n        menuList.classList.remove('active');\n        menuButton.classList.remove('active');\n      });\n    }\n    eventos.forEach(userEvent => {\n      menuButton.addEventListener(userEvent, openMenu);\n    });\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/menu-mobile.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/modal.js":
+/*!**********************************!*\
+  !*** ./scripts/modules/modal.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initModal)\n/* harmony export */ });\nfunction initModal() {\n  const btnOpen = document.querySelector('[data-modal=\"open\"]');\n  const btnClose = document.querySelector('[data-modal=\"close\"]');\n  const sectionModal = document.querySelector('[ data-modal=\"container\"]');\n  if (btnOpen && btnClose && sectionModal) {\n    function toggleModal(event) {\n      event.preventDefault();\n      sectionModal.classList.toggle(\"active\");\n    }\n    function outModal(event) {\n      if (event.target === this) {\n        toggleModal(event);\n      }\n    }\n    btnOpen.addEventListener(\"click\", toggleModal);\n    btnClose.addEventListener(\"click\", toggleModal);\n    sectionModal.addEventListener(\"click\", outModal);\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/modal.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/operation.js":
+/*!**************************************!*\
+  !*** ./scripts/modules/operation.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initOperation)\n/* harmony export */ });\nfunction initOperation() {\n  const operation = document.querySelector('[data-semana]');\n  const diasSemana = operation.dataset.semana.split(',').map(Number);\n  const horarioSemana = operation.dataset.horario.split(',').map(Number);\n  const dataAgora = new Date();\n  const diaAgora = dataAgora.getDay();\n  const horarioAgora = dataAgora.getHours();\n  const semanaOpen = diasSemana.indexOf(diaAgora) !== -1;\n  const horarioOpen = horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1];\n  if (horarioOpen && semanaOpen) {\n    operation.classList.add('open');\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/operation.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/outsideclick.js":
+/*!*****************************************!*\
+  !*** ./scripts/modules/outsideclick.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ outSideClick)\n/* harmony export */ });\nfunction outSideClick(element, events, callback) {\n  const html = document.documentElement;\n  const outside = 'data-outside';\n  function handleOutsideCkick(event) {\n    if (!element.contains(event.target)) {\n      element.removeAttribute(outside);\n      events.forEach(userEvent => {\n        html.removeEventListener(userEvent, handleOutsideCkick);\n      });\n      callback();\n    }\n  }\n  if (!element.hasAttribute(outside)) {\n    events.forEach(userEvent => {\n      setTimeout(() => {\n        html.addEventListener(userEvent, handleOutsideCkick);\n      });\n    });\n    element.setAttribute(outside, '');\n  }\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/outsideclick.js?");
+
+/***/ }),
+
+/***/ "./scripts/modules/tooltip.js":
+/*!************************************!*\
+  !*** ./scripts/modules/tooltip.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ InitTolltip)\n/* harmony export */ });\nfunction InitTolltip() {\n  const tooltips = document.querySelectorAll('[data-tooltip]');\n  function onMouseOver() {\n    const tooltipBox = createTolltipBox(this);\n    onMouseMove.tooltipBox = tooltipBox;\n    this.addEventListener('mousemove', onMouseMove);\n    onMouseLeave.tooltipBox = tooltipBox;\n    onMouseLeave.element = this;\n    this.addEventListener('mouseleave', onMouseLeave);\n  }\n  const onMouseLeave = {\n    handleEvent() {\n      this.tooltipBox.remove();\n      this.element.removeEventListener('mouseleave', onMouseLeave);\n      this.element.removeEventListener('mousemove', onMouseMove);\n    }\n  };\n  const onMouseMove = {\n    handleEvent(event) {\n      this.tooltipBox.style.top = `${event.pageY + 20}px`;\n      this.tooltipBox.style.left = `${event.pageX + 20}px`;\n    }\n  };\n  function createTolltipBox(element) {\n    const tooltipBox = document.createElement('div');\n    const text = element.getAttribute('aria-label');\n    tooltipBox.classList.add('tooltip');\n    tooltipBox.innerText = text;\n    document.body.appendChild(tooltipBox);\n    return tooltipBox;\n  }\n  tooltips.forEach(item => {\n    item.addEventListener('mouseover', onMouseOver);\n  });\n}\n\n//# sourceURL=webpack://animais-fantasticos/./scripts/modules/tooltip.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./scripts/index.js");
+/******/ 	
+/******/ })()
+;
