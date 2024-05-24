@@ -1,7 +1,7 @@
 import scrollSoft from "./modules/initScroll.js"
 import Accordion from "./modules/accordion.js"
 import TabNav from "./modules/activeTabs.js"
-import initModal from "./modules/modal.js"
+import Modal from "./modules/modal.js"
 import InitTolltip from "./modules/tooltip.js"
 import initDropdownMenu from "./modules/dropdown-menu.js"
 import initMenuMobile from "./modules/menu-mobile.js"
@@ -21,11 +21,17 @@ const tabNav = new TabNav(
 )
 tabNav.init()
 
-initAnimationScroll()
-initModal()
+const modal = new Modal(
+  '[data-modal="open"]',
+  '[data-modal="close"]',
+  '[ data-modal="container"]'
+)
+modal.init()
+
 InitTolltip()
 initDropdownMenu()
 initMenuMobile()
 initOperation()
 initFetchAnimais()
 initFetchBitcoin()
+initAnimationScroll()
