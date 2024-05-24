@@ -1,6 +1,6 @@
 import scrollSoft from "./modules/initScroll.js"
 import Accordion from "./modules/accordion.js"
-import activeTabs from "./modules/activeTabs.js"
+import TabNav from "./modules/activeTabs.js"
 import initModal from "./modules/modal.js"
 import InitTolltip from "./modules/tooltip.js"
 import initDropdownMenu from "./modules/dropdown-menu.js"
@@ -15,7 +15,12 @@ ScrollSoft.init()
 const accordion = new Accordion("[data-anime='accordion'] dt")
 accordion.init()
 
-activeTabs()
+const tabNav = new TabNav(
+  '[data-tab="menu"] li',
+  '[data-tab="content"] section'
+)
+tabNav.init()
+
 initAnimationScroll()
 initModal()
 InitTolltip()
