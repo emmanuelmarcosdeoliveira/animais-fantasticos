@@ -2,7 +2,7 @@ import scrollSoft from "./modules/initScroll.js"
 import Accordion from "./modules/accordion.js"
 import TabNav from "./modules/activeTabs.js"
 import Modal from "./modules/modal.js"
-import InitTolltip from "./modules/tooltip.js"
+import Tooltip from "./modules/tooltip.js"
 import initDropdownMenu from "./modules/dropdown-menu.js"
 import initMenuMobile from "./modules/menu-mobile.js"
 import initOperation from "./modules/operation.js"
@@ -28,7 +28,8 @@ const modal = new Modal(
 )
 modal.init()
 
-InitTolltip()
+const tooltip = new Tooltip("[data-tooltip]")
+tooltip.init()
 initDropdownMenu()
 initMenuMobile()
 initOperation()
