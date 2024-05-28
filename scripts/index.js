@@ -42,5 +42,5 @@ menuMobile.init()
 const operation = new Operation("[data-semana]", "open")
 operation.init()
 
-fetchAnimais("../../animaisapi.json", ".numeros-grid")
+fetchAnimais("./animaisapi.json", ".numeros-grid")
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco")
