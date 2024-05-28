@@ -1,17 +1,39 @@
-export default function initOperation() {
-  const operation = document.querySelector('[data-semana]')
+export default class Operation {
+  constructor(operation, activeClass) {
+    this.operation = document.querySelector(operation)
+    this.activeClass = activeClass
+  }
 
-  const diasSemana = operation.dataset.semana.split(',').map(Number)
-  const horarioSemana = operation.dataset.horario.split(',').map(Number)
+  dadosOperation() {
+    this.diasSemana = this.operation.dataset.semana.split(",").map(Number)
+    this.horarioSemana = this.operation.dataset.horario.split(",").map(Number)
+  }
 
-  const dataAgora = new Date()
-  const diaAgora = dataAgora.getDay()
-  const horarioAgora = dataAgora.getHours()
+  dadosAgora() {
+    this.dataAgora = new Date()
+    this.diaAgora = this.dataAgora.getDay()
+    this.horarioAgora = this.dataAgora.getUTCHours() - 3
+  }
 
-  const semanaOpen = diasSemana.indexOf(diaAgora) !== -1
-  const horarioOpen =
-    horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1]
-  if (horarioOpen && semanaOpen) {
-    operation.classList.add('open')
+  estaAberto() {
+    const semanaOpen = this.diasSemana.indexOf(this.diaAgora) !== -1
+    const horarioOpen =
+      this.horarioAgora >= this.horarioSemana[0] &&
+      this.horarioAgora < this.horarioSemana[1]
+    return semanaOpen && horarioOpen
+  }
+
+  activeOpen() {
+    if (this.estaAberto()) {
+      this.operation.classList.add(this.activeClass)
+    }
+  }
+  init() {
+    if (this.operation) {
+      this.dadosOperation()
+      this.dadosAgora()
+      this.activeOpen()
+    }
+    return this
   }
 }
