@@ -7,7 +7,7 @@ import initDropdownMenu from "./modules/dropdown-menu.js"
 import initMenuMobile from "./modules/menu-mobile.js"
 import initOperation from "./modules/operation.js"
 import fetchAnimais from "./modules/fetch-animais.js"
-import initFetchBitcoin from "./modules/fetch-bitcoin.js"
+import fetchBitcoin from "./modules/fetch-bitcoin.js"
 import initAnimationScroll from "./modules/animationScroll.js"
 
 const ScrollSoft = new scrollSoft('[data-menu="smoth"] a[href^="#"]')
@@ -33,7 +33,7 @@ tooltip.init()
 initDropdownMenu()
 initMenuMobile()
 initOperation()
-initFetchBitcoin()
 initAnimationScroll()
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid")
+fetchBitcoin("https://blockchain.info/ticker", ".btc-preco")
