@@ -8,7 +8,7 @@ import initMenuMobile from "./modules/menu-mobile.js"
 import initOperation from "./modules/operation.js"
 import fetchAnimais from "./modules/fetch-animais.js"
 import fetchBitcoin from "./modules/fetch-bitcoin.js"
-import initAnimationScroll from "./modules/animationScroll.js"
+import ScrollAnima from "./modules/scroll-anima.js"
 
 const ScrollSoft = new scrollSoft('[data-menu="smoth"] a[href^="#"]')
 ScrollSoft.init()
@@ -30,10 +30,13 @@ modal.init()
 
 const tooltip = new Tooltip("[data-tooltip]")
 tooltip.init()
+
+const scrollAnima = new ScrollAnima("[data-anime='scroll']")
+scrollAnima.init()
+
 initDropdownMenu()
 initMenuMobile()
 initOperation()
-initAnimationScroll()
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid")
 fetchBitcoin("https://blockchain.info/ticker", ".btc-preco")
