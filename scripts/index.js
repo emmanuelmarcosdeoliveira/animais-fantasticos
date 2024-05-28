@@ -40,7 +40,6 @@ const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]')
 menuMobile.init()
 
 const operation = new Operation("[data-semana]", "open")
-console.log(operation)
 operation.init()
 
 fetchAnimais("../../animaisapi.json", ".numeros-grid")
