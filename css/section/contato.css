@@ -23,10 +23,11 @@
   background: var(--cor-3);
 }
 .copy p {
-  padding: 20px;
+  padding-block: 8px;
   font-family: var(--font-1);
   font-weight: 700;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .copy a {
@@ -36,4 +37,7 @@
   margin-bottom: 1rem;
   color: var(--cor-4);
   font-weight: 700;
+  cursor: pointer;
+  padding-inline: 10px;
+  text-align: center;
 }
