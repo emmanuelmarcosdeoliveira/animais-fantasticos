@@ -30,3 +30,10 @@ a {
   color: var(--cor-2);
   text-decoration: none;
 }
+
+.arrow-black {
+  background: url(../../assets/imgs/arrow-black.svg) no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+}
