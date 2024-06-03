@@ -5,51 +5,15 @@
 
 <!-- Titulo do Projeto -->
 
-## ✨Animais Fantásticos - JavaScript ES6
-
-<!-- <img alt="GitHub Forks" src="https://img.shields.io/github/forks/emmanuelmarcosdeoliveira/portfolio-github"/>
-<br> -->
+# ✨Animais Fantásticos - JavaScript ES6
 
 ![Static Badge](https://img.shields.io/badge/--path?style=plastic&logo=JavaScript&logoColor=efd81d&logoSize=auto&label=JavaScript%20ES6%2B&labelColor=black&color=%23efd81d&link=https%3A%2F%2Fdeveloper.mozilla.org%2Fpt-BR%2Fdocs%2FLearn%2FJavaScript)
 ![GitHub top language](https://img.shields.io/github/languages/top/emmanuelmarcosdeoliveira/animais-fantasticos?style=plastic&labelColor=%23000)
 ![GitHub forks](https://img.shields.io/github/forks/emmanuelmarcosdeoliveira/js-slide-origamid?style=plastic&labelColor=%23000)
 
-\_Esse Projeto faz parte do curso de JavaScript ES6 Completo da [Origamid](https://www.origamid.com). Nesse curso foi abordado:
-
-<sub><code> `Variaveis` `Tipos de Dados` `Funções` `Escopo` `Objetos` `Efeitos no Dom` `JavaScript Assíncrono` `Promises` `Fetch` `Classes` `Rest e Spread` `Destructuring` `Async&Await` `Regular Expression` </code></sub></br>
-Entre outros temas como **Git** ,**Automação de processos** **Webpack e Babel**
-
-- É um site que descreve as caracteristicas de 05 animais Fantásticos **JavaScript**.\_
-
-`Task`
-
-- Desenvolver o Projeto do Zero, criando elementos de animação praticando a Linguagem **JavaScript**
-
-`Charlenge`
-
-Os Maiores desafios foram:
-
-- [x] Colocar em pratíca o que foi aprendido no curso. Criando animações como
-- [x] **Navegação por Tabs**
-- [x] **Accordion List**
-- [x] **Scroll Suave**
-- [x] **Animaçào ao Fazer o Scroll**
-- [x] **Modal**
-- [x] **Dropdown Menu**
-- [x] **Menu Mobile**
-- [x] **Tooltips**
-- [x] **Animação de Números**
-- [x] **Fetch API com 02 API's distitnas**
-- [x] **Criaçào de Carrousel de Imagens**
-
-> [!Tip]
-> Caso queira ver como ficou siga os passos abaixo.
-
-<!-- Menu -->
-
 ## Table of Contents
 
-- [Project description](#-portfólio-github)
+- [Project description](#project-description)
 - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [technologies and tools](#technologies-and-tools)
@@ -59,6 +23,40 @@ Os Maiores desafios foram:
 - [Contributors or owners](#contributors-or-owners)
 - [Contact](#contact)
 - [License](#license)
+
+## Project Description
+
+Esse Projeto faz parte do curso de JavaScript ES6 Completo da [Origamid](https://www.origamid.com). É um site que descreve as caracteristicas de 05 animais Fantásticos durante o curso foi abordado alguns dos assuntos como:<br>
+`Variaveis` `Tipos de Dados` `Funções` `Escopo` `Objetos` `Efeitos no Dom` `JavaScript Assíncrono` `Promises` `Fetch` `Classes` `Rest e Spread` `Destructuring` `Async&Await` `Regular Expression`</br>
+Entre outros temas como **Git** ,**Automação de processos** **Webpack e Babel**
+
+**JavaScript**.\_
+
+`Task`
+
+- Desenvolver o Projeto do Zero, criando elementos de animação praticando a Linguagem **JavaScript**
+
+`Charlenge`
+
+Os Maiores desafios foram:<br>
+Colocar em pratíca o que foi aprendido no curso, criando animações sem nenhum uso de plugin externo como:
+
+- [x] **Navegação por Tabs**
+- [x] **Accordion List**
+- [x] **Scroll Suave**
+- [x] **Animaçào ao Fazer o Scroll**
+- [x] **Modal**
+- [x] **Dropdown Menu**
+- [x] **Menu Mobile**
+- [x] **Tooltips**
+- [x] **Animação de Números**
+- [x] **Fetch API com 02 API's distintas**
+- [x] **Criaçào de Carrousel de Imagens**
+
+> [!Tip]
+> Caso queira ver como ficou siga os passos abaixo.
+
+<!-- Menu -->
 
 <!-- Setup do Projeto -->
 
@@ -80,7 +78,7 @@ Requisitos necessários para rodar o projeto:<br>
 >
 > - Run Time [Node.js](https://nodejs.org/en/) com a versão _16 ou superior_.<br>
 > - Um editor de códigos onde eu recomendo o [VCode](https://code.visualstudio.com/)<br>
-> - E o [git](https://git-scm.com/downloads) uma aplicaçào de versionamento de código.
+> - E o [git](https://git-scm.com/downloads) uma aplicação de versionamento de código.
 > - Extensão do VSCode [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
 ### technologies and tools
@@ -94,13 +92,13 @@ Requisitos necessários para rodar o projeto:<br>
 
 ## Instalation
 
-Para que você consiga rodar esse projeto em seu computador você tera que fazer o [fork](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) do repositório. Caso você não saiba como fazer isso estou deixando um **link** para a documentação oficial do gitHub onde é esclarecido como fazer essse processo.<br> Fazendo esse processo você tera uma copia desse Repositório no seu GitHub.
+Para rodar o projeto em seu computador você tera que fazer o [fork](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) do repositório. Caso você não saiba como fazer, estou deixando um **link** da documentação oficial do gitHub, onde é esclarecido como fazer essse processo.<br> Fazendo esse processo você tera uma copia desse Repositório no seu GitHub.
 <br>
 <img alt="Static Badge" src="https://img.shields.io/badge/-path?style=social&logo=git&label=GitHub%20Docs&color=%23000">
 <a href="https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo"></a>
 
 Depois de ter feito o **fork** vamos fazer o [clone](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository) desse Repositório atráves do **VSCode**. </br>
-Caso você não saiba como fazer isso estou deixando um link para a documentação oficial do gitHub onde é esclarecido como fazer essse processo.
+Caso você não saiba como fazer, estou deixando um link para a documentação oficial do gitHub onde é esclarecido como fazer essse processo.
 <br>
 <sub>Command Line</sub>
 
@@ -150,7 +148,7 @@ npm run dev
 
 <br>
 
-**3. Iniciar o LiveServer clicando com o botão Direito do Mouse no arquivo `index.html` em **Open with Live Server\*\*
+**3 Iniciar o LiveServer clicando com o botão Direito do Mouse no arquivo `index.html` em `Open with Live Server`**
 
  <!-- Imagem de Demostração -->
 <h3 align="center"> Imagem de demostração do Projeto
@@ -158,11 +156,11 @@ npm run dev
 </br>
 </br>
 
-<img src="/public/print-project.png" alt="Print do Projeto"/>
+<img src="./public/print-project.png" alt="Print do Projeto"/>
 </h3>
 
 <h3 align="center">📽️project demonstration video</h3>
-<br> 
+<br>
 <p align="center">Video de Demostraçào</p>
 
 <br>
