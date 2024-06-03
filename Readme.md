@@ -27,10 +27,8 @@
 ## Project Description
 
 Esse Projeto faz parte do curso de JavaScript ES6 Completo da [Origamid](https://www.origamid.com). É um site que descreve as caracteristicas de 05 animais Fantásticos durante o curso foi abordado alguns dos assuntos como:<br>
-`Variaveis` `Tipos de Dados` `Funções` `Escopo` `Objetos` `Efeitos no Dom` `JavaScript Assíncrono` `Promises` `Fetch` `Classes` `Rest e Spread` `Destructuring` `Async&Await` `Regular Expression`</br>
+`Variaveis` `Tipos de Dados` `Funções` `Escopo` `Objetos` `Efeitos no Dom` `JavaScript Assíncrono` `Promises` `Fetch` `Classes` `Rest e Spread` `Destructuring` `Async&Await` `Regular Expression` `entre outros assuntos` </br>
 Entre outros temas como **Git** ,**Automação de processos** **Webpack e Babel**
-
-**JavaScript**.\_
 
 `Task`
 
@@ -39,7 +37,7 @@ Entre outros temas como **Git** ,**Automação de processos** **Webpack e Babel*
 `Charlenge`
 
 Os Maiores desafios foram:<br>
-Colocar em pratíca o que foi aprendido no curso, criando animações sem nenhum uso de plugin externo como:
+Colocar em pratíca o que foi aprendido no curso, criando animações, sem nenhum uso de plugin externo:
 
 - [x] **Navegação por Tabs**
 - [x] **Accordion List**
@@ -139,7 +137,7 @@ npm install
 
 ## Usage
 
-**2. Inicie o servidor de Desenvolvimento com o seguinte comando dentro do Terminal**<br>
+**2. Inicie o processo de compilação do JavaScript com o seguinte comando dentro do Terminal**<br>
 <sub>Command Line</sub>
 
 ```npm
