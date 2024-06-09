@@ -7,6 +7,11 @@
   color: var(--cor-4);
 }
 
+.animais h4 {
+  font-family: var(--font-1);
+  color: var(--cor-4);
+  text-transform: uppercase;
+}
 .animais h2::before {
   content: "";
   display: inline-block;
