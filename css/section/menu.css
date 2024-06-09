@@ -2,7 +2,7 @@
   grid-column: 3/5;
   margin: 2rem 0;
   background-color: var(--cor-3);
-}
+ }
 
 .menu ul {
   display: flex;
