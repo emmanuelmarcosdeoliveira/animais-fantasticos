@@ -26,7 +26,7 @@
 
 ## Project Description
 
-Esse Projeto faz parte do curso de JavaScript ES6 Completo da [Origamid](https://www.origamid.com). É um site que descreve as caracteristicas de 05 animais Fantásticos durante o curso foi abordado alguns dos assuntos como:<br>
+Esse Projeto faz parte do curso de JavaScript ES6 Completo da [Origamid](https://www.origamid.com). É um site que descreve as caracteristicas de 06 animais Fantásticos durante o curso foi abordado alguns dos assuntos como:<br>
 `Variaveis` `Tipos de Dados` `Funções` `Escopo` `Objetos` `Efeitos no Dom` `JavaScript Assíncrono` `Promises` `Fetch` `Classes` `Rest e Spread` `Destructuring` `Async&Await` `Regular Expression` `entre outros assuntos` </br>
 Também foram abordados temas como **Git** ,**Automação de processos** **Webpack e Babel**
 
