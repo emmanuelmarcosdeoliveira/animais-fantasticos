@@ -23,7 +23,7 @@
   box-shadow: 0 0 0 10px var(--cor-white);
   position: relative;
   box-sizing: border-box;
-}
+ }
 .close {
   width: 50px;
   height: 50px;
@@ -79,4 +79,4 @@
 
 .active .modal {
   animation: modal 0.3s forwards;
-}
+  }

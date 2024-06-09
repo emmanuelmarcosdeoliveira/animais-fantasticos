@@ -8,7 +8,10 @@
   margin-bottom: 0.5rem;
   color: var(--cor-4);
   cursor: pointer;
-}
+  }
+.list-faq p {
+  margin-block: .875rem;
+  }
 .list-faq dt::before {
   content: "";
   display: inline-block;
@@ -22,3 +25,8 @@
   margin-bottom: 0.5rem;
   margin-left: 30px;
 }
+.list-faq p {
+  line-height: 1.4;
+  text-wrap: wrap;
+  }
+
