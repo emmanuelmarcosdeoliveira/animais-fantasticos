@@ -1,8 +1,6 @@
 <!-- Banner de Apresentação -->
- <img src="https://github.com/emmanuelmarcosdeoliveira/servidor-estatico/blob/main/banner-github.gif" alt="banner-github">
+![Banner](https://github.com/emmanuelmarcosdeoliveira/servidor-estatico/blob/main/github/emmanuelOliveira.gif)
 <br>
-<br>
-
 <!-- Titulo do Projeto -->
 
 # ✨Animais Fantásticos - JavaScript ES6
